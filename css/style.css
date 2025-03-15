@@ -1,0 +1,178 @@
+/* step 1: logo animation */
+#logo{
+    animation: mymove 5s forwards;
+}
+
+@keyframes mymove {
+    from {opacity: 0; width: 25px;}
+    to {opacity: 1; width: 475px;}
+}
+
+/* step 2: font and background image */
+body{
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* step 3: header tag with flex */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* step 4: modify nav links with flex */
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+/* step 5: links stay the same color */
+a {
+    color: blue;
+}
+
+a:link {
+    color: blue;
+}
+  
+a:visited {
+    color: blue;
+}
+  
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: blue;
+}
+
+/* step 6: around corner of header inside card class */
+.card > header{
+    background: #288088;
+    border: solid #45ADAD 2px;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+}
+
+/* step 7 & 8: pricing list with flex*/
+/* dimension: Cmd + Shift + M */
+.card {
+    border-radius: 50px 50px 0 0; /* step 6 */
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;  /* FIXME: wrong width */
+    width: 532px;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* step 9 & 10: style images in the gallery class */
+.gallery img{
+    border: solid 10px  #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 1h 15min */
+/* screen size larger than 900px */
+@media screen and (min-width: 900px){
+    /* step 11: flex for the header section */
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* step 12: flex for the pricing section */
+    .pricing{
+        display: flex;
+        flex-direction: row;
+    }
+
+    card{
+        flex: 1 1 275px;
+    }
+
+    /* step 13: fixing the first header */
+    body > header{
+        position: fixed;
+        width: 100%;
+        top: 0px;
+    }
+
+    body{
+        padding-top: 80px;
+    }
+}
+
+
+/* user prefers reduced motion   */
+@media (prefers-reduced-motion) {
+    #logo{
+        animation: none;
+    }
+}
+
+/* portrait mode */
+@media print{
+    /* step 15 & 16: print body */
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    /* step 17: nav links */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  /* FIXME: space around */
+    }
+
+    /* step 18 & 19: pricing */
+    .pricing{
+        display: flex;
+        flex-direction: row;
+    }
+
+    card{
+        border: solid 2px #45ADDD;
+        flex-basis: 275px;
+    }
+
+    /* step 20: hiding gallery */
+    .gallery{
+        display: none;
+    }
+
+    #gallery{
+        display: none;
+    }
+
+    /* time: 1hr 15min + 55min = 2hr 10min*/
+    /* step 21: TODO */
+
+}
