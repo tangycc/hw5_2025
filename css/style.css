@@ -30,23 +30,23 @@ header{
 
 /* step 5: links stay the same color */
 a {
-    color: blue;
+    color: #0000FF;
 }
 
 a:link {
-    color: blue;
+    color: #0000FF;
 }
   
 a:visited {
-    color: blue;
+    color: #0000FF;
 }
   
 a:hover {
-    color: blue;
+    color: #0000FF;
 }
 
 a:active {
-    color: blue;
+    color: #0000FF;
 }
 
 /* step 6: around corner of header inside card class */
@@ -63,7 +63,7 @@ a:active {
     border-radius: 50px 50px 0 0; /* step 6 */
     display: flex;
     flex-direction: column;
-    flex-basis: 450px;  /* FIXME: wrong width */
+    flex-basis: 450px;
     width: 532px;
 }
 
@@ -149,7 +149,7 @@ a:active {
     .nav_links{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;  /* FIXME: space around */
+        justify-content: space-between;
     }
 
     /* step 18 & 19: pricing */
@@ -173,6 +173,8 @@ a:active {
     }
 
     /* time: 1hr 15min + 55min = 2hr 10min*/
-    /* step 21: TODO */
+    .pricing .card ul li:nth-child(2)::after {
+        content: " 👍";
+    }
 
 }
